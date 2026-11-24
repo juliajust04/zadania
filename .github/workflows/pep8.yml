@@ -1,0 +1,22 @@
+name: PEP8 Check
+
+on: [push, pull_request]
+
+jobs:
+  pep8:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Install pycodestyle
+        run: python -m pip install pycodestyle
+
+      - name: Check PEP8
+        run: pycodestyle --exclude=.venv,.idea,.git --count .

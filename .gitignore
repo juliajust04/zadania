@@ -4,3 +4,6 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+queue.csv
+queue.csv.lock
+queue.tmp

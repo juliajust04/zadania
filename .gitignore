@@ -4,3 +4,10 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+queue.db
+queue.db-journal
+queue.db-wal
+queue.db-shm
+queue.csv
+queue.csv.lock
+queue.tmp
